@@ -1,0 +1,88 @@
+@use "variables" as var;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin mobile {
+  @media (max-width: var.$breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: var.$breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: var.$breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin box-shadow($shadow: var.$shadow-md) {
+  box-shadow: $shadow;
+}
+
+@mixin text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@mixin button-base {
+  padding: 12px 30px;
+  font-family: var.$font-family;
+  font-size: 16px;
+  font-weight: var.$font-weight-bold;
+  border: none;
+  border-radius: var.$border-radius-md;
+  cursor: pointer;
+
+  @include box-shadow(var.$shadow-sm);
+
+  &:focus {
+    outline: none;
+    box-shadow: var.$shadow-focus;
+  }
+
+  &:active {
+    transform: translateY(2px);
+    box-shadow: var.$shadow-sm;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+@mixin button-hover($color) {
+  &:hover:not(:disabled) {
+    background-color: ($color, 10%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba($color, 0.3);
+  }
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin reset-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}

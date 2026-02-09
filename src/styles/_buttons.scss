@@ -1,0 +1,72 @@
+@use "variables" as var;
+@use "mixins" as mix;
+
+#buttons {
+  display: flex;
+  gap: var.$spacing-lg;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  margin-top: var.$spacing-md;
+  padding: var.$spacing-md;
+
+  @include mix.mobile {
+    gap: var.$spacing-sm;
+    margin-top: var.$spacing-md;
+    padding: var.$spacing-sm;
+  }
+}
+
+button {
+  @include mix.button-base;
+
+  @include mix.mobile {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+#solveBtn {
+  background-color: var.$color-secondary;
+  color: var.$color-white;
+
+  @include mix.button-hover(var.$color-secondary);
+
+  &:active:not(:disabled) {
+    background-color: (var.$color-secondary, 15%);
+  }
+}
+
+#clearBtn {
+  background-color: var.$color-anex3;
+  color: var.$color-white;
+
+  @include mix.button-hover(var.$color-anex3);
+
+  &:active:not(:disabled) {
+    background-color: (var.$color-anex3, 15%);
+  }
+}
+
+button {
+  &.loading {
+    position: relative;
+    color: transparent;
+    pointer-events: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      left: 50%;
+      margin-left: -8px;
+      margin-top: -8px;
+      border: 2px solid rgba(var.$color-white, 0.3);
+      border-top-color: var.$color-white;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+$color-primary: #000000;
+$color-secondary: #363030;
+$color-background: #ecf0f1;
+$color-white: #ffffff;
+
+$color-anex1: #302e2e;
+$color-anex2: #44dbcf;
+$color-anex3: #696969;
+
+$color-border-thin: #bdc3c7;
+$color-border-thick: #000000;
+$color-cell-bg: #ffffff;
+$color-cell-hover: #b3b9be;
+$color-cell-focus: #dbdfe2;
+
+$color-text-primary: #000000;
+$color-text-secondary: #7f8c8d;
+
+$cell-size: 50px;
+$cell-size-tablet: 50px;
+$cell-size-mobile: 40px;
+
+$border-thin: 1px;
+$border-thick: 3px;
+
+$grid-gap: 0;
+
+$font-family: "Exo 2", sans-serif;
+$font-input: "caveat";
+$font-size-cell: 30px;
+$font-size-cell-tablet: 20px;
+$font-size-cell-mobile: 18px;
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$spacing-xs: 5px;
+$spacing-sm: 10px;
+$spacing-md: 20px;
+$spacing-lg: 30px;
+$spacing-xl: 40px;
+
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+
+$shadow-focus: 0 0 0 3px rgba(52, 152, 219, 0.3);
+
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 992px;
